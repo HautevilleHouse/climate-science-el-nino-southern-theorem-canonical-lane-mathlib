@@ -1,0 +1,81 @@
+import ClimateScienceElNinoSouthernTheoremCanonicalLaneLean.ReviewerBridge
+
+/-!
+# Theorem Statement Layer for Climate Science El Nino Southern Theorem
+-/
+
+namespace HautevilleHouse
+namespace ClimateScienceElNinoSouthernTheoremCanonicalLaneLean
+
+structure TheoremStatement where
+  sourceKey : String
+  theoremName : String
+  theoremObject : String
+  classicalBoundary : String
+  manifoldConstrainedStatement : String
+  certificateLane : String
+  carriedRemainder : String
+deriving Repr, DecidableEq
+
+def sourceTheoremStatement : TheoremStatement := {
+  sourceKey := "climate-science-el-nino-southern-theorem-canonical-lane",
+  theoremName := "ClimateScienceElNinoSouthernTheorem",
+  theoremObject := "ENSO teleconnections and energy balance closure",
+  classicalBoundary := "classical climate system beyond ENSO closure",
+  manifoldConstrainedStatement := "ENSO-constrained theorem certificate internalized through baseline gates, source constants, reviewer bridge, manifest hashes, and outside-constant dependency count",
+  certificateLane := "enso_constrained",
+  carriedRemainder := "classical source boundary carried by formalizationCertificate.theoremBoundaryOpen and sourceTheoremBoundary"
+}
+
+def ClassicalSourceBoundaryCarried : Prop :=
+  formalizationCertificate.theoremBoundaryOpen = true ∧
+  formalizationCertificate.sourceConjectureClosureClaimed = false
+
+def ManifoldConstrainedTheoremClosed : Prop :=
+  baselineCertificateLane = "enso_constrained" ∧
+  baselineCertificateAllPass = true ∧
+  outsideConstantDependencyCount = 0
+
+def TheoremLayerInternalized : Prop :=
+  sourceTheoremStatement.sourceKey = "climate-science-el-nino-southern-theorem-canonical-lane" ∧
+  sourceTheoremStatement.certificateLane = baselineCertificateLane ∧
+  ClassicalSourceBoundaryCarried ∧
+  ManifoldConstrainedTheoremClosed
+
+theorem theorem_statement_source_key_checked :
+    sourceTheoremStatement.sourceKey = "climate-science-el-nino-southern-theorem-canonical-lane" := by
+  rfl
+
+theorem theorem_statement_certificate_lane_checked :
+    sourceTheoremStatement.certificateLane = baselineCertificateLane := by
+  rfl
+
+theorem classical_source_boundary_carried_checked :
+    ClassicalSourceBoundaryCarried := by
+  unfold ClassicalSourceBoundaryCarried
+  constructor
+  · rfl
+  · rfl
+
+theorem manifold_constrained_theorem_closed_checked :
+    ManifoldConstrainedTheoremClosed := by
+  unfold ManifoldConstrainedTheoremClosed
+  constructor
+  · rfl
+  · constructor
+    · rfl
+    · rfl
+
+theorem theorem_layer_internalized_checked :
+    TheoremLayerInternalized := by
+  unfold TheoremLayerInternalized
+  constructor
+  · rfl
+  · constructor
+    · rfl
+    · constructor
+      · exact classical_source_boundary_carried_checked
+      · exact manifold_constrained_theorem_closed_checked
+
+end ClimateScienceElNinoSouthernTheoremCanonicalLaneLean
+end HautevilleHouse
